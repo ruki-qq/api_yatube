@@ -10,7 +10,7 @@ class Group(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return self.title[:20] + '..' if len(self.title) > 20 else self.title
+        return self.title[:20]
 
 
 class Post(models.Model):
@@ -29,7 +29,7 @@ class Post(models.Model):
     )
 
     def __str__(self):
-        return self.text[:20] + '..' if len(self.text) > 20 else self.text
+        return self.text[:20]
 
 
 class Comment(models.Model):
@@ -45,4 +45,4 @@ class Comment(models.Model):
     )
 
     def __str__(self):
-        return self.text[:20] + '..' if len(self.text) > 20 else self.text
+        return self.text[:20]
